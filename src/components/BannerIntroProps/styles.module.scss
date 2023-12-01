@@ -1,0 +1,65 @@
+$screen-2xl: 96rem;
+$screen-xl: 80rem;
+$screen-lg: 64rem;
+$screen-md: 48rem;
+$screen-sm: 40rem;
+
+.bannerIntro {
+	background: {
+		repeat: no-repeat;
+		position: center;
+		size: cover;
+	}
+
+	&.bgLight {
+		background-image: url('../../assets/image/background-light.jpg');
+	}
+	&.bgDark {
+		background-image: url('../../assets/image/background-dark.jpg');
+	}
+
+	.content {
+		--_padding-top: 2rem;
+		min-height: calc(500px - var(--_padding-top));
+	}
+
+	@media (max-width: $screen-lg) {
+		.content {
+			height: 80vh;
+			min-height: auto;
+		}
+	}
+}
+
+.card {
+	backdrop-filter: blur(10px);
+
+	&.light {
+		background: rgba(69, 71, 135, 0.08);
+	}
+
+	&.dark {
+		background: rgba(0, 0, 0, 0.16);
+	}
+}
+
+.image {
+	width: 100%;
+	height: calc(100% - 2rem);
+	right: 4rem;
+	position: absolute;
+	background: {
+		position: bottom right;
+		repeat: no-repeat;
+		size: contain;
+	}
+
+	@media (max-width: $screen-lg) {
+		position: relative;
+		right: 0;
+
+		background: {
+			position: bottom center;
+		}
+	}
+}
